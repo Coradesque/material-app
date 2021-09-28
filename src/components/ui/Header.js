@@ -21,6 +21,7 @@ const myStyle = makeStyles(theme => ({
 
   logoContainer: {
     padding: 0,
+    "&:hover":{backgroundColor: 'transparent'}
   },
 
 
@@ -92,7 +93,7 @@ export default function Header(props) {
         <ElevationScroll>
           <AppBar position="fixed" color="primary">
             <Toolbar disableGutters={true}>
-              <Button className={style.logoContainer} component={Link} to='/' onClick={() => {setActiveTab(0)}}>
+              <Button className={style.logoContainer} component={Link} to='/' disableRipple onClick={() => {setActiveTab(0)}}>
                 <Logo alt="logo" className={style.logo} />
               </Button>
               <Tabs
